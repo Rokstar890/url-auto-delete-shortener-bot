@@ -12,8 +12,8 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('23762978', ''))
-API_HASH = environ.get('eff30dac5504a8660e69bfe19f668571', '')
+API_ID = int(environ.get('API_ID', '23762978'))
+API_HASH = environ.get('API_HASH', 'eff30dac5504a8660e69bfe19f668571')
 BOT_TOKEN = environ.get('6686437724:AAEd2HCxSC5otL5-XS3NuRtQ2nhVG63V5vE', "")
 
 #Port
@@ -36,11 +36,11 @@ AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "https://t.me/+KEUXcl2WUT02MzA1")
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+DATABASE_NAME = environ.get('Database', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '1001896066430'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001896066430'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'search_zone_support')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), True)
 IMDB = is_enabled((environ.get('IMDB', "False")), True)
